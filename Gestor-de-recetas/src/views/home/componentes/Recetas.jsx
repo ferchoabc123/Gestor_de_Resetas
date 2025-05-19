@@ -5,16 +5,22 @@ const recetas = [
   { id: 1, nombre: 'Tortilla de Patatas', imagen: '', calificacion: 4.5 },
   { id: 2, nombre: 'Paella Valenciana', imagen: '', calificacion: 5 },
   { id: 3, nombre: 'Gazpacho Andaluz', imagen: '', calificacion: 4 },
+  { id: 1, nombre: 'Tortilla de Patatas', imagen: '', calificacion: 4.5 },
+  { id: 2, nombre: 'Paella Valenciana', imagen: '', calificacion: 5 },
+ 
 ];
 
 const imagenDefault = "https://via.placeholder.com/80x80?text=Receta";
 
 function Recetas() {
+
+  
+
   return (
-    <div className="container mt-4">
-      <ul className="list-group d-flex justify-content-center text-center bg-dark text-white border border-secondary">
+    <div className="container mt-4 border border-secondary rounded">
+      <ul className="list-group d-flex justify-content-center text-center bg-dark text-white">
         {recetas.map(receta => (
-          <li key={receta.id} className="list-group-item bg-dark text-white border-secondary">
+          <li key={receta.id} className="list-group-item bg-dark text-white border-0">
             <div className="d-flex flex-column align-items-center">
               <img
                 src={receta.imagen || imagenDefault}
